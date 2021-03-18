@@ -4,7 +4,7 @@ import fs from 'fs'
 export type Province = {
   id: string
   name: {
-    kh: string
+    km: string
     latin: string
   }
 }

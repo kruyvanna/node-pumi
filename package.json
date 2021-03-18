@@ -7,7 +7,7 @@
     "dev": "nodemon index.ts",
     "start": "node build/index.js",
     "build": "tsc --project ./",
-    "test": "jest"
+    "test": "jest --watch"
   },
   "author": "@kruyvanna",
   "license": "ISC",

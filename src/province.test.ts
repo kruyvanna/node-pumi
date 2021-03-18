@@ -7,5 +7,6 @@ test('province count', () => {
 
 test('get first province', () => {
   const provinces = provinceApi.getAll()
-  expect(provinces[0].name.kh).toBe('បន្ទាយមានជ័យ')
+  const firstProvince = provinces[0]
+  expect(firstProvince.name.km).toBe('ក្រចេះ')
 })
