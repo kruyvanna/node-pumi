@@ -5,28 +5,36 @@ import * as villageApi from './src/village'
 
 import express from 'express'
 
-const villages = villageApi.getByCommuneId('010201')
-console.log('villages: ', villages)
+const app = express()
 
-// const communes = communeApi.getByDistrictId('0102')
-// console.log('communes: ', communes)
+app.get('/', async (req, res) => {
+  res.send('Khmer Geo API Server')
+})
 
-// const districts = districtApi.getAll()
-// console.log('districts: ', districts)
+app.get('/provinces', async (req, res) => {
+  const provinces = provinceApi.getAll()
+  res.send(provinces)
+})
 
-// const districtsOfPP = districtApi.getByProvinceId('12')
-// console.log('districtsOfPP: ', districtsOfPP)
+app.get('/districts/:provinceId', async (req, res) => {
+  const { provinceId } = req.params
+  const districts = districtApi.getByProvinceId(provinceId)
+  res.send(districts)
+})
 
-// const provinces = provinceApi.getAll()
-// console.log('provinces: ', provinces)
+app.get('/communes/:districtId', async (req, res) => {
+  const { districtId } = req.params
+  const communes = communeApi.getByDistrictId(districtId)
+  res.send(communes)
+})
 
-// const app = express()
+app.get('/villages/:communeId', async (req, res) => {
+  const { communeId } = req.params
+  const villages = villageApi.getByCommuneId(communeId)
+  res.send(villages)
+})
 
-// app.get('/', async (req, res) => {
-//   res.send('Khmer Geo API Server')
-// })
-
-// const port = process.env.PORT || 3002
-// app.listen(port, () => {
-//   console.log(`App listening at http://localhost:${port}`)
-// })
+const port = process.env.PORT || 3002
+app.listen(port, () => {
+  console.log(`App listening at http://localhost:${port}`)
+})
