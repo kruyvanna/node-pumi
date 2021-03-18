@@ -1,9 +1,16 @@
+import * as districtApi from './src/district'
 import * as provinceApi from './src/province'
 
 import express from 'express'
 
-const provinces = provinceApi.getAll()
-console.log('provinces: ', provinces)
+// const districts = districtApi.getAll()
+// console.log('districts: ', districts)
+
+const districtsOfPP = districtApi.getByProvinceId('12')
+console.log('districtsOfPP: ', districtsOfPP)
+
+// const provinces = provinceApi.getAll()
+// console.log('provinces: ', provinces)
 
 // const app = express()
 

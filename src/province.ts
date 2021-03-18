@@ -2,6 +2,7 @@ import YAML from 'yaml'
 import fs from 'fs'
 
 export type Province = {
+  id: string
   name: {
     kh: string
     latin: string
@@ -9,14 +10,19 @@ export type Province = {
 }
 
 function getDoc() {
-  console.log(__dirname)
-  console.log(process.cwd())
   const file = fs.readFileSync('./src/data/provinces.yml', 'utf8')
   return YAML.parse(file)
 }
 
 export const getAll = (): Province[] => {
   const doc = getDoc()
-  //   console.log('doc: ', doc)
-  return Object.values(doc.provinces)
+  const ids = Object.keys(doc.provinces)
+  const provinces = ids.map((id) => {
+    const province = doc.provinces[id] as Province
+    return {
+      ...province,
+      id,
+    }
+  })
+  return provinces
 }
