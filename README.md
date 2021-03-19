@@ -67,7 +67,7 @@ Get by Khmer name
 /village/nameKm/:name
 ```
 
-Example: [http://localhost:3002/province/nameLatin/Phnom Penh](http://localhost:3002/province/namekm/%E1%9E%97%E1%9F%92%E1%9E%93%E1%9F%86%E1%9E%96%E1%9F%81%E1%9E%89)
+Example: [http://localhost:3002/province/nameLatin/ភ្នំពេញ](http://localhost:3002/province/namekm/%E1%9E%97%E1%9F%92%E1%9E%93%E1%9F%86%E1%9E%96%E1%9F%81%E1%9E%89)
 
 Get by Latin name
 
