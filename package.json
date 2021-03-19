@@ -30,5 +30,8 @@
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "node"
+  },
+  "engines": {
+    "node": "15.x"
   }
 }
