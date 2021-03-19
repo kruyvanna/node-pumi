@@ -32,3 +32,15 @@ export const getByCommuneId = (communeId: string): Village[] => {
   const villages = all.filter((d) => d.id.startsWith(communeId))
   return villages
 }
+
+export const findByNameKm = (name: string): Village | undefined => {
+  const all = getAll()
+  const village = all.find((p) => p.name.km === name)
+  return village
+}
+
+export const findByNameLatin = (name: string): Village | undefined => {
+  const all = getAll()
+  const village = all.find((p) => p.name.latin === name)
+  return village
+}
