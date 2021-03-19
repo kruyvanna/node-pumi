@@ -1,5 +1,5 @@
 {
-  "name": "js-pumi",
+  "name": "node-pumi",
   "version": "1.0.0",
   "description": "API Server for querying administrative regions in Cambodia including Provinces, Districts, Communes and Villages.",
   "main": "index.js",

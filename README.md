@@ -1,6 +1,6 @@
-# JS Pumi
+# Node Pumi
 
-JS Pumi API Server for querying administrative regions in Cambodia including Provinces, Districts, Communes and Villages
+Node Pumi is an API Server for querying administrative regions in Cambodia including Provinces, Districts, Communes and Villages
 
 The data is forked from awsome [pumi](https://github.com/dwilkie/pumi) project by [dwilkie](https://github.com/dwilkie)
 
