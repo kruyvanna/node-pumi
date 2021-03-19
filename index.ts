@@ -18,6 +18,18 @@ app.get('/provinces', async (req, res) => {
   res.send(provinces)
 })
 
+app.get('/province/nameKm/:name', async (req, res) => {
+  const { name } = req.params
+  const province = provinceApi.findByNameKm(name)
+  res.send(province)
+})
+
+app.get('/province/nameLatin/:name', async (req, res) => {
+  const { name } = req.params
+  const province = provinceApi.findByNameLatin(name)
+  res.send(province)
+})
+
 app.get('/districts/:provinceId', async (req, res) => {
   const { provinceId } = req.params
   const districts = districtApi.getByProvinceId(provinceId)

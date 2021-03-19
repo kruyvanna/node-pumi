@@ -26,3 +26,15 @@ export const getAll = (): Province[] => {
   })
   return provinces
 }
+
+export const findByNameKm = (name: string): Province | undefined => {
+  const all = getAll()
+  const province = all.find((p) => p.name.km === name)
+  return province
+}
+
+export const findByNameLatin = (name: string): Province | undefined => {
+  const all = getAll()
+  const province = all.find((p) => p.name.latin === name)
+  return province
+}

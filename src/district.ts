@@ -32,3 +32,15 @@ export const getByProvinceId = (provinceId: string): District[] => {
   const district = all.filter((d) => d.id.startsWith(provinceId))
   return district
 }
+
+export const findByNameKm = (name: string): District | undefined => {
+  const all = getAll()
+  const district = all.find((p) => p.name.km === name)
+  return district
+}
+
+export const findByNameLatin = (name: string): District | undefined => {
+  const all = getAll()
+  const district = all.find((p) => p.name.latin === name)
+  return district
+}
