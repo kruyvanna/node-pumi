@@ -1,5 +1,5 @@
-import YAML from 'yaml'
 import fs from 'fs'
+import yaml from 'js-yaml'
 
 export type Village = {
   id: string
@@ -11,11 +11,11 @@ export type Village = {
 
 function getDoc() {
   const file = fs.readFileSync('./src/data/villages.yml', 'utf8')
-  return YAML.parse(file)
+  return yaml.load(file)
 }
 
 export const getAll = (): Village[] => {
-  const doc = getDoc()
+  const doc = getDoc() as any
   const ids = Object.keys(doc.villages)
   const villages = ids.map((id) => {
     const values = doc.villages[id] as Village
