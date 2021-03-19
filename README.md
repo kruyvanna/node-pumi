@@ -58,6 +58,28 @@ Get villages of a commune
 /villages/:communeId
 ```
 
+Get by Khmer name
+
+```
+/province/nameKm/:name
+/district/nameKm/:name
+/commune/nameKm/:name
+/village/nameKm/:name
+```
+
+Example: [http://localhost:3002/province/nameLatin/Phnom Penh](http://localhost:3002/province/namekm/%E1%9E%97%E1%9F%92%E1%9E%93%E1%9F%86%E1%9E%96%E1%9F%81%E1%9E%89)
+
+Get by Latin name
+
+```
+/province/nameLatin/:name
+/district/nameLatin/:name
+/commune/nameLatin/:name
+/village/nameLatin/:name
+```
+
+Example: [http://localhost:3002/province/nameLatin/Phnom Penh](http://localhost:3002/province/nameLatin/Phnom%20Penh)
+
 ## Develop
 
 The project is written in typescript. To compile and run the code everytime you change the source code type the following command
