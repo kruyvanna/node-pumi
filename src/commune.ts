@@ -32,3 +32,15 @@ export const getByDistrictId = (districtId: string): Commune[] => {
   const communes = all.filter((d) => d.id.startsWith(districtId))
   return communes
 }
+
+export const findByNameKm = (name: string): Commune | undefined => {
+  const all = getAll()
+  const commune = all.find((p) => p.name.km === name)
+  return commune
+}
+
+export const findByNameLatin = (name: string): Commune | undefined => {
+  const all = getAll()
+  const commune = all.find((p) => p.name.latin === name)
+  return commune
+}
