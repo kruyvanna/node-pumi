@@ -1,7 +1,7 @@
 {
-  "name": "khmer-geo",
+  "name": "js-pumi",
   "version": "1.0.0",
-  "description": "",
+  "description": "API Server for querying administrative regions in Cambodia including Provinces, Districts, Communes and Villages.",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.ts",
