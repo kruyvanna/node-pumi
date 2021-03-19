@@ -3,12 +3,14 @@ import * as districtApi from './src/district'
 import * as provinceApi from './src/province'
 import * as villageApi from './src/village'
 
+import cors from 'cors'
 import express from 'express'
 
 const app = express()
+app.use(cors())
 
 app.get('/', async (req, res) => {
-  res.send('Khmer Geo API Server')
+  res.send('Node Pumi API Server')
 })
 
 app.get('/provinces', async (req, res) => {
