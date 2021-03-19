@@ -24,6 +24,40 @@ Start the server
 yarn start
 ```
 
+Check the server response.
+In your browser, open this url
+[http://localhost:3002/provinces](http://localhost:3002/provinces)
+
+```
+http://localhost:3002/provinces
+```
+
+## REST APIs
+
+Get all provinces
+
+```
+/provinces
+```
+
+Get districts of a province
+
+```
+/districts/:provinceId
+```
+
+Get communes of a district
+
+```
+/communes/:districtId
+```
+
+Get villages of a commune
+
+```
+/villages/:communeId
+```
+
 ## Develop
 
 The project is written in typescript. To compile and run the code everytime you change the source code type the following command
