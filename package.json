@@ -7,7 +7,8 @@
     "dev": "nodemon index.ts",
     "start": "node build/index.js",
     "build": "tsc --project ./",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "to-json": "ts-node src/JsonConverter/village_to_json.ts"
   },
   "author": "@kruyvanna",
   "license": "ISC",
@@ -35,7 +36,7 @@
     "testEnvironment": "node"
   },
   "engines": {
-    "node": "15.x",
+    "node": "14.x",
     "yarn": "1.22.5"
   }
 }
