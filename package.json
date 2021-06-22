@@ -8,7 +8,7 @@
     "start": "node build/index.js",
     "build": "tsc --project ./",
     "test": "jest --watch",
-    "to-json": "ts-node src/JsonConverter/village_to_json.ts"
+    "to-json": "ts-node src/JsonConverter/convert_all.ts"
   },
   "author": "@kruyvanna",
   "license": "ISC",
